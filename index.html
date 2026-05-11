@@ -8,7 +8,49 @@
 </head>
 
 <body>
-
+    <header>
+        <h1>Pesquisa Online </h1>
+    </header>
+    <section>
+        <!-- Dados pessoais -->
+        <form action="" method="get">
+            <fieldset>
+                <legend>
+                    Dados pessoais
+                </legend>
+                <label for="userName">Nome</label>
+                <!-- for para saber de que input ele é rótulo -->
+                <input type="text" name="userName" required>
+                <br>
+                <!-- type para o tipo de dado n ser diferente do esperado
+                    name para definir a função do input 
+                    required para ser obritório-->
+                <label for="userAge">Idade</label>
+                <input type="number" name="userAge" min="12" max="100" required>
+                <!-- máximo e minimo que aceita -->
+                <br>
+                <label for="birthDate">Data de nascimento</label>
+                <input type="date" name="birthDate">
+                <!-- tipo date para datas -->
+                <br>
+                <label for="userEmail">Email</label>
+                <input type="email" name="userEmail" required>
+                <br>
+                <label for="userPhoneNumber">Telefone</label>
+                <input type="tel" name="userPhoneNumber" placeholder="DDD + número sem espaço ou hífen"
+                    pattern="[0-9]{11}" required>
+                <!-- telefone com padrão numeros de 0 a 9 e 11 digitos
+                        placeholder pra aparecer texto dentro do input -->
+                <br>
+                <label for="userImage">Upload de foto</label>
+                <input type="file" name="userImage" accept="image/*">
+                <!-- accept pra dizer que tipo de arquivo aceita -->
+                <br>
+            </fieldset>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer></footer>
 </body>
 
 </html>
