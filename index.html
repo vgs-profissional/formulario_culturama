@@ -69,6 +69,7 @@
                 <br>
                 <label for="state" required>Estado:</label>
                 <select id="state" name="userState">
+                    <!-- Lista padrão que voce rola pra achar oq quer -->
                     <option value="Acre">Acre</option>
                     <option value="Alagoas">Alagoas</option>
                     <option value="Amapá">Amapá</option>
@@ -115,6 +116,20 @@
                 <br>
                 <input type="checkbox" name="social" id="X" value="X">
                 <label for="X">Instagram</label>
+                <!-- Checkbox para multiplas escolhas -->
+                <!-- Com id eu consigo fazer q ao clicar no label de pra interagir -->
+                <br>
+                <label for="musicStyle">Estilo Musical</label>
+                <input list="musicGenre" type="text" name="userMusicStyle" id="musicStyle">
+                <!-- datalist serve pra por sugestão num input de texto livre -->
+                <!-- passe pro input qual lista ele deve recomendar através de list e tem q ter o mesmo valor q o id da lista -->
+                <datalist id="musicGenre">
+                    <option value="Rock">
+                    <option value="Sertanejo">
+                    <option value="Pop">
+                    <option value="Funk">
+                    <option value="Samba">
+                </datalist>
             </fieldset>
             <button type="submit">Enviar</button>
         </form>
