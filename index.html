@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa Culturama</title>
 </head>
 
@@ -14,53 +14,52 @@
     <section>
         <!-- Dados pessoais -->
         <form action="" method="get">
-            <!-- <fieldset>
+            <fieldset>
                 <legend>
                     Dados pessoais
                 </legend>
-                <label for="userName">Nome</label>
-                <!-- for para saber de que input ele é rótulo 
-                <input type="text" name="userName" required>
+                <label for="id">Nome</label>
+                <!-- for para saber de que input ele é rótulo -->
+                <input type="text" id="userid" name="userName" required>
                 <br>
                 <!-- type para o tipo de dado n ser diferente do esperado
-                    name para definir a função do input 
-                    required para ser obritório
-                <label for="userAge">Idade</label>
-                <input type="number" name="userAge" min="12" max="100" required>
-                <!-- máximo e minimo que aceita 
+                    id ou name para definir a função do input 
+                    required para ser obritório-->
+                <label for="age">Idade</label>
+                <input type="number" id="age" name="age" min="12" max="100" required>
+                <!-- máximo e minimo que aceita -->
                 <br>
                 <label for="birthDate">Data de nascimento</label>
-                <input type="date" name="birthDate">
-                <!-- tipo date para datas 
+                <input type="date" id="birthDate" name="userBirthdate">
+                <!-- tipo date para datas -->
                 <br>
-                <label for="userEmail">Email</label>
-                <input type="email" name="userEmail" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="userEmail" required>
                 <br>
-                <label for="userPhoneNumber">Telefone</label>
-                <input type="tel" name="userPhoneNumber" placeholder="DDD + número sem espaço ou hífen"
+                <label for="phoneNumber">Telefone</label>
+                <input type="tel" id="phoneNumber" name="userPhoneNumber" placeholder="DDD + número sem espaço ou hífen"
                     pattern="[0-9]{11}" required>
                 <!-- telefone com padrão numeros de 0 a 9 e 11 digitos
-                        placeholder pra aparecer texto dentro do input 
+                        placeholder pra aparecer texto dentro do input-->
                 <br>
-                <label for="userImage">Upload de foto</label>
-                <input type="file" name="userImage" accept="image/*">
-                <!-- accept pra dizer que tipo de arquivo aceita 
+                <label for="image">Upload de foto</label>
+                <input type="file" id="image" name="userImage" accept="image/*">
+                <!-- accept pra dizer que tipo de arquivo aceita -->
                 <br>
-            </fieldset> -->
+            </fieldset>
 
             <fieldset>
-                <!-- Perfil -->
                 <legend>Perfil</legend>
                 <p>Genêro:</p>
-                <input type="radio" name="userGender" value="Masculino">
-                <label for="userGender">Masculino</label>
-                <input type="radio" name="userGender" value="Feminino">
-                <label for="userGender">Feminino</label>
-                <input type="radio" name="userGender" value="notInformed">
-                <label for="userGender">Prefiro não informar</label>
+                <input type="radio" name="userGender" value="Masculino" id="mas">
+                <label for="mas">Masculino</label>
+                <input type="radio" name="userGender" value="Feminino" id="fem">
+                <label for="fem">Feminino</label>
+                <input type="radio" name="userGender" value="notInformed" id="notInformed">
+                <label for="notInformed">Prefiro não informar</label>
                 <br>
                 <label for="maritalStatus">Estado Civil:</label>
-                <select name="maritalStatus">
+                <select id="maritalStatus" name="userMaritalStatus">
                     <option value="notInformed">Selecionar</option>
                     <option value="Casado(a)">Casado(a)</option>
                     <option value="Solteiro(a)">Solteiro(a)</option>
@@ -68,8 +67,9 @@
                     <option value="União_Estável">União Estável</option>
                 </select>
                 <br>
-                <label for="userState" required>Estado:</label>
-                <select name="userState">
+                <label for="state" required>Estado:</label>
+                <select id="state" name="userState">
+                    <!-- Lista padrão que voce rola pra achar oq quer -->
                     <option value="Acre">Acre</option>
                     <option value="Alagoas">Alagoas</option>
                     <option value="Amapá">Amapá</option>
@@ -99,8 +99,40 @@
                     <option value="Tocantins">Tocantins</option>
                 </select>
                 <br>
-                <label for="userCity">Cidade</label>
-                <input type="text" name="userCity" placeholder="Ex.: Fortaleza" autocomplete="address-level2">
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="userCity" placeholder="Ex.: Fortaleza" autocomplete="address-level2">
+            </fieldset>
+            <fieldset>
+                <legend>Hábitos</legend>
+                <p>Redes sociais:</p>
+                <input type="checkbox" name="social" id="instagram" value="instagram">
+                <label for="instagram">Instagram</label>
+                <br>
+                <input type="checkbox" name="social" id="facebook" value="facebook">
+                <label for="facebook">Facebook</label>
+                <br>
+                <input type="checkbox" name="social" id="linkedIn" value="linkedIn">
+                <label for="linkedIn">LinkedIn</label>
+                <br>
+                <input type="checkbox" name="social" id="X" value="X">
+                <label for="X">Instagram</label>
+                <!-- Checkbox para multiplas escolhas -->
+                <!-- Com id eu consigo fazer q ao clicar no label de pra interagir -->
+                <br>
+                <label for="musicStyle">Estilo Musical Favorito:</label>
+                <input list="musicGenre" type="text" name="userMusicStyle" id="musicStyle">
+                <!-- datalist serve pra por sugestão num input de texto livre -->
+                <!-- passe pro input qual lista ele deve recomendar através de list e tem q ter o mesmo valor q o id da lista -->
+                <datalist id="musicGenre">
+                    <option value="Rock">
+                    <option value="Sertanejo">
+                    <option value="Pop">
+                    <option value="Funk">
+                    <option value="Samba">
+                </datalist>
+                <br>
+                <label for="favColor">Cor Favorita:</label>
+                <input type="color" name="userFavColor" id="favColor">
             </fieldset>
             <button type="submit">Enviar</button>
         </form>
