@@ -119,7 +119,7 @@
                 <!-- Checkbox para multiplas escolhas -->
                 <!-- Com id eu consigo fazer q ao clicar no label de pra interagir -->
                 <br>
-                <label for="musicStyle">Estilo Musical</label>
+                <label for="musicStyle">Estilo Musical Favorito:</label>
                 <input list="musicGenre" type="text" name="userMusicStyle" id="musicStyle">
                 <!-- datalist serve pra por sugestão num input de texto livre -->
                 <!-- passe pro input qual lista ele deve recomendar através de list e tem q ter o mesmo valor q o id da lista -->
@@ -130,6 +130,9 @@
                     <option value="Funk">
                     <option value="Samba">
                 </datalist>
+                <br>
+                <label for="favColor">Cor Favorita:</label>
+                <input type="color" name="userFavColor" id="favColor">
             </fieldset>
             <button type="submit">Enviar</button>
         </form>
