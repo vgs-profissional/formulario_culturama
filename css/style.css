@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #f1f1f1;
+}
+
+main {
+    /* Ocupa 100% da tela mas só usa 700px */
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+header {
+    /* Elementos de linha como texto n se usa margin: auto, só usa isso em elementos de bloco */
+    text-align: center;
+}
+
+header>img {
+    /* Img meio estourada, diminui a largura e por consequencia a altura */
+    width: 100px;
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+fieldset {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 17px;
+    font-weight: bold;
+
+    padding: 0 5px;
+}
+
+input {
+    margin: 3px;
+    border-radius: 6px;
+    border: 1px solid #b9b7b7;
+    padding: 2px;
+}
+
+input#image {
+    border: 0px;
+}
+
+label {
+    margin: 6px 0;
+}
+
+textarea {
+    max-width: 635px;
+    max-height: 100px;
+
+    min-width: 200px;
+    min-height: 50px;
+}
+
+button {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #d4d4d4;
+    padding: 8px;
+    margin: 6px;
+    border: none;
+    border-radius: 10px;
+}
+
+button#apagar {
+    background-color: rgb(216, 88, 88);
+}
