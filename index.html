@@ -150,7 +150,16 @@
                 <br>
                 <textarea name="userComment" id="avaliacao" placeholder="Digite aqui..."></textarea>
             </fieldset>
+            <fieldset>
+                <legend>Consentimento</legend>
+                <input type="checkbox" name="userLGPDTerm" id="LGPDTerm" value="confirmed" required>
+                <label for="LGPDTerm">Aceito participar da pesquisa</label>
+                <br>
+                <input type="checkbox" name="userGetResult" id="getResult" value="getResult">
+                <label for="getResult">Quero receber os resultados da pesquisa</label>
+            </fieldset>
             <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
         </form>
     </section>
     <footer></footer>
