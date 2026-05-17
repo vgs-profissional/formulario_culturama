@@ -26,15 +26,15 @@
                     <legend>
                         Dados pessoais
                     </legend>
-                    <label for="id">Nome</label>
+                    <label for="name">Nome</label>
                     <!-- for para saber de que input ele é rótulo -->
-                    <input type="text" id="userid" name="userName" required>
+                    <input type="text" id="name" name="userName" required>
                     <br>
                     <!-- type para o tipo de dado n ser diferente do esperado
                     id ou name para definir a função do input 
                     required para ser obritório-->
                     <label for="age">Idade</label>
-                    <input type="number" id="age" name="age" min="12" max="100" required>
+                    <input type="number" id="age" name="userAge" min="12" max="100" required>
                     <!-- máximo e minimo que aceita -->
                     <br>
                     <label for="birthDate">Data de nascimento</label>
@@ -159,7 +159,7 @@
                     <input type="radio" name="userOpinion" value="ruim" id="ruim">
                     <label for="userOpinion">Ruim</label>
                     <br>
-                    <label for="userComment">Deixe um comentário:</label>
+                    <label id="comentario" for="userComment">Deixe um comentário:</label>
                     <br>
                     <textarea name="userComment" id="avaliacao" placeholder="Digite aqui..."></textarea>
                 </fieldset>

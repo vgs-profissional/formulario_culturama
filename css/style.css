@@ -35,6 +35,8 @@ form {
     padding: 15px;
     border-radius: 15px;
     margin: 15px 0;
+
+    box-shadow: 3px 3px 10px grey;
 }
 
 fieldset {
@@ -48,37 +50,76 @@ legend {
     font-weight: bold;
 
     padding: 0 5px;
+    /* width: 100%; */
+
+    text-align: center;
 }
 
 input {
-    margin: 3px;
     border-radius: 6px;
     border: 1px solid #b9b7b7;
-    padding: 2px;
+
+    padding: 2px 0;
 }
 
 input#image {
     border: 0px;
 }
 
-label {
+/* Assim da pra acessar pela propriedade name */
+input[name="social"],
+input[name='userOpinion'],
+label#comentario {
     margin: 6px 0;
 }
 
+input[type='radio'],
+input[type='checkbox'] {
+    width: auto;
+}
+
+input[type='color'] {
+    width: 40px;
+    padding: 2px;
+}
+
+label {
+    display: inline-block;
+    padding: 4px 0;
+}
+
+select {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #b9b7b7;
+}
+
 textarea {
+    width: 100%;
     max-width: 635px;
     max-height: 100px;
 
     min-width: 200px;
     min-height: 50px;
+
+    border-radius: 6px;
+    border: 1px solid #b9b7b7;
+}
+
+input,
+textarea {
+    width: 100%;
 }
 
 button {
     font-size: 16px;
     font-weight: 500;
+
     background-color: #d4d4d4;
+
     padding: 8px;
     margin: 6px;
+
     border: none;
     border-radius: 10px;
 }
