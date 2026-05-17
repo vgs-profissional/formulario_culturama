@@ -34,7 +34,7 @@ form {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 15px;
-    margin: 15px 0;
+    margin: 15px 0 100px 0;
 
     box-shadow: 3px 3px 10px grey;
 }
@@ -62,11 +62,12 @@ input {
     padding: 2px 0;
 }
 
+/* Sessão para inputs específicos */
 input#image {
     border: 0px;
 }
 
-/* Assim da pra acessar pela propriedade name */
+/* vAssim da pra acessar pela propriedade namev */
 input[name="social"],
 input[name='userOpinion'],
 label#comentario {
@@ -83,6 +84,19 @@ input[type='color'] {
     padding: 2px;
 }
 
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: red;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border-color: green;
+}
+
+/* ^Assim da pra acessar pela propriedade name^ */
 label {
     display: inline-block;
     padding: 4px 0;
@@ -111,9 +125,20 @@ textarea {
     width: 100%;
 }
 
+p {
+    margin: 0 0 10px 0;
+}
+
+/* Da pra fazer alterações no placeholder usando essa propriedade */
+input::placeholder,
+textarea::placeholder {
+    padding: 5px;
+}
+
 button {
     font-size: 16px;
     font-weight: 500;
+    width: 90px;
 
     background-color: #d4d4d4;
 
@@ -122,10 +147,16 @@ button {
 
     border: none;
     border-radius: 10px;
-    
+
     cursor: pointer
 }
 
-button#apagar {
+button[type='submit']:hover {
+    background-color: green;
+    color: white;
+}
+
+button#apagar:hover {
     background-color: rgb(216, 88, 88);
+    color: white;
 }
