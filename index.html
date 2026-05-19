@@ -45,13 +45,15 @@
                     <input type="email" id="email" name="userEmail" required>
                     <br>
                     <label for="phoneNumber">Telefone</label>
-                    <input type="tel" id="phoneNumber" name="userPhoneNumber"
-                        placeholder="DDD + número sem espaço ou hífen" pattern="[0-9]{11}" required>
+                    <input type="tel" id="phoneNumber" name="userPhoneNumber" pattern="[0-9]{11}"
+                        aria-describedby="phoneHelp" required>
                     <!-- telefone com padrão numeros de 0 a 9 e 11 digitos
                         placeholder pra aparecer texto dentro do input-->
+                    <small id="phoneHelp">Preencha com 11 digitos no formato ddd + número sem espaços ou hífen.</small>
                     <br>
                     <label for="image">Upload de foto</label>
-                    <input type="file" id="image" name="userImage" accept="image/*">
+                    <input type="file" id="image" name="userImage" accept="image/*" aria-describedby="imgHelp">
+                    <small id="imgHelp">Envie uma foto no formato .PNG ou .JPEG</small>
                     <!-- accept pra dizer que tipo de arquivo aceita -->
                     <br>
                 </fieldset>
@@ -171,8 +173,8 @@
                     <input type="checkbox" name="userGetResult" id="getResult" value="getResult">
                     <label for="getResult">Quero receber os resultados da pesquisa</label>
                 </fieldset>
-                <button type="submit">Enviar</button>
-                <button type="reset" id="apagar">Limpar</button>
+                <button type="submit" aria-label="Envia Dados do formulário">Enviar</button>
+                <button type="reset" id="apagar" aria-label="Limpar dados do formulário">Limpar</button>
             </form>
         </section>
     </main>

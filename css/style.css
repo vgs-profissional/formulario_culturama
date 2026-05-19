@@ -97,6 +97,11 @@ textarea:valid {
 }
 
 /* ^Assim da pra acessar pela propriedade name^ */
+small {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 label {
     display: inline-block;
     padding: 4px 0;
@@ -106,6 +111,7 @@ select {
     width: 100%;
     border-radius: 6px;
     border: 1px solid #b9b7b7;
+    margin-bottom: 6px;
 }
 
 textarea {
